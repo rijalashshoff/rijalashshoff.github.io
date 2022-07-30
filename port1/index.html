@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+    
+</head>
+<body id="badan">
+    <div class="inputBox">
+        <div class="box">
+            <p id="teks">Masukan Nama dan Provinsi</p>
+        </div>
+    </div>
+    <div class="inputBox">
+        <input type="text" name="" id="first" required="required">
+        <span>Nama Panggilan</span>
+    </div> 
+    <div class="inputBox">
+        <input type="text" name="" id="last" required="required">
+        <span>Provinsi atau Kabupaten</span>
+    </div>
+    <div class="inputBox p">
+        <input type="submit" id="kirim" value="Submit">
+    </div>
+    <div class="inputBox p reset">
+    <input type="reset" value="Reset" id="reset">
+    </div>
+
+    <footer  style="color: white; position:absolute; bottom:0; text-align: center;">
+        <p>Web By <span style="color: red;">&hearts;</span> Rijal</p>
+    </footer>
+
+<script>
+    document.getElementById("kirim").onclick = function() {
+    var myName = document.getElementById("first").value;
+    var myCity = document.getElementById("last").value;
+
+    myName = myName.toLowerCase();
+    myCity = myCity.toLowerCase();
+
+    if(myName == "azka" && myCity == "probolinggo" || myName == "aca" && myCity == "jawa timur" || myName == "aca" && myCity == "probolinggo" || myName == "azka" && myCity == "jawa timur") {
+       document.getElementById("teks").innerHTML = "<marquee>&hearts;Abang Sayang Aca&hearts;</marquee>"; 
+    } else {
+        document.getElementById("teks").innerHTML = "Salam Kenal " + myName + ", dari " + myCity;
+    };
+}
+
+    document.getElementById("reset").onclick = function() {
+        window.location.reload(true);
+};
+</script>
+</body>
+</html>
